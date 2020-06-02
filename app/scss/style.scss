@@ -1,0 +1,375 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "global";
+
+.header{
+    position: relative;
+    height: 100vh;
+}
+.header__slider{
+    margin-bottom: 25px;
+    &-item{
+        height: 100vh;
+        background-image: url(../images/header-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center;
+        position: relative;
+    }
+}
+.slider-item__info{
+    position: absolute;
+    right: 80px;
+    bottom: 116px;
+    text-align: right;
+}
+.slider-item__info-suptitle{
+    margin-bottom: 5px;
+}
+.slider-item__info-suptext{
+    margin-bottom: 8px;
+}
+.slider-item__info-title{
+    font-size: 80px;
+    line-height: 86px;
+    font-weight: 800;
+    margin-bottom: 48px;
+}
+.slider-item__info-text{
+    font-size: 40px;
+    line-height: 46px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.slider-arrow{
+    position: absolute;
+    top: 40px;
+    max-height: 50px;
+    cursor: pointer;
+    z-index: 4;
+}
+.slider-arrow__left{
+    right: 125px;
+}
+.slider-arrow__right{
+    right: 80px;
+}
+.slider-dots{
+    position: absolute;
+    right: 50px;
+    bottom: 36px;
+    max-width: 920px;
+    width: 100%;
+    .slick-current{
+        .dots-box{
+            border-top: 4px solid $green;
+        }
+    }
+}
+.dots-box{
+    width: 200px;
+    height: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 4px solid #fff;
+    padding-top: 11px;
+    &__number{
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 34px;
+    }
+    &__name{
+        font-weight: 300;
+        line-height: 19px;
+        text-transform: capitalize;
+    }
+}
+.heaer__aside{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    border-right: 1px solid rgba(#fff, .25);
+    height: 100vh;
+    text-align: center;
+}
+.header__tile{
+    font-size: 200px;
+    line-height: 156px; 
+    opacity: 0.07;
+    font-weight: 800;
+    max-width: 467px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+}
+.menu{
+    padding-top: 40px;
+    a{
+        span{
+            display: block;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 3px;
+            margin-bottom: 22px;
+            padding-top: 6px;
+            text-transform: capitalize;
+        }
+    }
+}
+.header__date{
+    font-weight: 800;
+    font-size: 72px;
+    line-height: 64px;
+    span{
+        padding-top: 15px;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 1.4px;
+        margin-bottom: 30px;
+        display: block;
+    }
+}
+.header__search{
+    padding-top: 15px;
+    padding-bottom: 35px;
+}
+.header__location{
+    display: inline-block;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 1.05px;
+    font-weight: 300;
+    padding-left: 20px;
+    text-transform: capitalize;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 11px;
+        height: 13px;
+        background-image: url(../images/marker.svg);
+        left: 0;
+        top: 0;
+    }
+}
+.header__arrows-down{
+    position: absolute;
+    left: 209px;
+    bottom: 41px;
+    z-index: 2;
+}
+.header__map{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+}
+.line-beach__animation{
+    stroke-dashoffset: 1150;
+    stroke-dasharray: 1250;
+    animation: animdash 12s infinite 12s;
+}
+.line__animation{
+    stroke-dashoffset: 560;            //точка начала в данном случае(600 по размеру линии)
+    stroke-dasharray: 560;             // длинна линии
+    animation: animdash 6s infinite 6s; 
+    //animation: выполнить анимацию
+    //animdash - какую анимацию выполнить(название) 
+    //4s - сколько времени ее выполнять 
+    //infinite - сколько раз выполнять(бесконечно в данном случае)
+    //linear - сколько раз выполнять(единажды в данном случае)
+    //6s - с какой задержкой ее выполнять
+}
+
+@keyframes animdash{            //@keyframes начало для задания цепи событий, animdash мной выбранное имя цепи
+    to{
+    stroke-dashoffset: 0;
+    }
+}
+
+
+.surf{
+    padding: 160px 0 120px;
+    background-image: url(../images/surf-bg-marker.png);
+    background-position: right 219px;
+    background-repeat: no-repeat;
+    background-size: auto;
+    // position: relative;
+}
+.surf__suptitle{
+    text-align: right;
+    padding-right: 80px;
+    transform: translateY(-100%);
+}
+.surf-slider{
+    padding-top: 110px;
+    .slider-arrow{
+        top: 50px;
+        opacity: .25;
+    }
+    .slick-slide:nth-child(4n+1){
+        .surf-box{
+            margin-top: 32px;
+        }
+    }
+    .slick-slide:nth-child(4n+3){
+        .surf-box{
+            margin-top: 89px;
+        }
+    }
+    .slick-current{
+        .surf-box__inner{
+            background: rgba(#1C2121, .3);
+        }
+        .surf-box__inner-btn{
+            display: block;
+        }
+    }
+}
+.surf-box{ 
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &__inner{
+        min-height: 750px;
+        background: rgba(#1C2121, .85);
+        position: relative;
+        transition: all .6s;
+        &:hover{
+            background: rgba(#1C2121, .3);
+            .surf-box__inner-btn{
+                display: block;
+            }
+        }
+    }
+    .surf-box__inner-title{
+        padding: 72px 0 0 40px;
+        width: 140px;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 36px;
+    }
+    .surf-box__inner-location{
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 8px;
+        transform: rotate(-90deg);
+        position: absolute;
+        left: 40px;
+        bottom: 80px;
+        width: 0;
+        height: 0;
+        white-space: nowrap;
+        span{
+            font-weight: 100;
+        }
+    }
+    .surf-box__inner-btn{
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        left: 0;
+        right: 0;
+        display: none;
+    }
+}
+.surf-map{
+    min-height: 635px;
+    max-width: 1200px;
+    background-image: url(../images/world-map.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin: 0 auto;
+    .slick-list{
+        min-height: 635px;
+    }
+    .slick-current{
+        .surf-dots__item{
+            display: block;     
+        }
+    }
+}
+.surf-dots__circle{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: $green;
+    box-shadow: 0px 0px 16px 0px $green;
+}
+.surf-dots__item{
+    display: none;
+}
+.surf-dots__coordinates{
+    display: none;
+}
+.surf-dots{
+    position: relative;
+    // &:hover{
+    //     padding-top: 60px;
+    //     background: url(../images/surf-drop-of-map.svg) 0px -10px no-repeat;
+    //     .surf-dots__circle{
+    //         display: none;
+    //     }
+    // }
+}
+.surf-dots--hawaii{
+    top: 355px;
+    left: 15px;
+}
+.surf-dots--california{
+    top: 290px;
+    left: -15px;
+    .surf-dots__circle{
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            background-image: url(../images/surf-map-marker.png);
+            background-size: cover;
+            top: -25px;
+            right: -23px;
+            width: 14px;
+            height: 17px;
+        }
+    }
+}
+.surf-dots--puerto-rico{
+    top: 320px;
+    left: 35px;
+}
+.surf-dots--rio-de-janeiro{
+    top: 500px;
+    left: -35px;
+}
+.surf-dots--france{
+    top: 215px;
+    left: -70px;
+}
+.surf-dots--durban{
+    top: 555px;
+    left: -110px;
+}
+.surf-dots--sri-lanka{
+    top: 390px;
+    left: -95px;
+}
+.surf-dots--airlie-beach{
+    top: 500px;
+    left: 38px;
+}
+
+
+
+
+
+
+
+
+@import "media";
