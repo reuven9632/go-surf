@@ -293,11 +293,6 @@
     .slick-current{
         .surf-dots__item{
             display: block; 
-            width: 283px;
-            height: 216px;
-            padding: 28px 31px 0 32px;
-            border-radius: 6%;
-            background-color: rgba(#0F1010, .7);
         }
     }
 }
@@ -334,7 +329,7 @@
 .surf-dots__item-content{
     text-align: center;
     img{
-        margin-bottom: 7px;
+        margin: 0 auto 7px;
     }
 }
 .surf-dots__item-number{
@@ -349,31 +344,51 @@
     line-height: 12px;
 }
 .surf-dots__circle{
-    width: 24px;
-    height: 24px;
+    width: 23px;
+    height: 23px;
     border-radius: 50%;
     background-color: $green;
     box-shadow: 0px 0px 16px 0px $green;
 }
 .surf-dots__item{
     display: none;
+    z-index: 1;
+    width: 283px;
+    height: 216px;
+    padding: 28px 31px 0 32px;
+    border-radius: 4%;
+    background-color: rgba(#0F1010, .7);
+    position: absolute;
+    bottom: 44px;
+    transform: translateX(-50%);
+    &::before{
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border: 12px solid transparent;
+        border-bottom: 19.5px solid $green;
+        border-bottom-left-radius: 20%;
+        border-bottom-right-radius: 20%;
+        bottom: -30px;
+        left: 50%;
+    }
 }
 .surf-dots__coordinates{
     display: none;
 }
 .surf-dots{
     position: relative;
-    // &:hover{
-    //     padding-top: 60px;
-    //     background: url(../images/surf-drop-of-map.svg) 0px -10px no-repeat;
-    //     .surf-dots__circle{
-    //         display: none;
-    //     }
-    // }
 }
 .surf-dots--hawaii{
     top: 355px;
-    left: 15px;
+    left: 16px;
+    .surf-dots__item{
+        transform: translateX(-5%);
+        &::before{
+            left: 14px;
+        }
+    }
 }
 .surf-dots--california{
     top: 290px;
@@ -401,8 +416,14 @@
     left: -35px;
 }
 .surf-dots--france{
-    top: 215px;
+    top: 227px;
     left: -70px;
+    .surf-dots__item{
+        bottom: 35px;
+        &::before{
+            bottom: -20px;
+        }
+    }
 }
 .surf-dots--durban{
     top: 555px;
@@ -415,6 +436,12 @@
 .surf-dots--airlie-beach{
     top: 500px;
     left: 38px;
+    .surf-dots__item{
+        transform: translateX(-60%);
+        &::before{
+            left: 60%;
+        }
+    }
 }
 
 
