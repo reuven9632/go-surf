@@ -443,6 +443,9 @@
     }
 }
 .travel-slider{
+    background-image: url(../images/travel-cocktail.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
     &__head{
         background-position: top left;
         background-repeat: no-repeat;
@@ -453,10 +456,55 @@
         padding: 132px 82px 0 0;
     }
     &__description{
-        margin-top: -102px;
+        min-height: 300px;
+        background-repeat: no-repeat;
+        background-position: right;
+        margin-top: -245px;
+        padding: 147px 0px 0px 135px;
+        img{
+            padding-left: 26px;
+        }
     }
 }
-
+.travel-slider__info{
+    padding: 70px 140px 20px 132px;
+    display: flex;
+    justify-content: space-around;
+}
+.travel-slider__items{
+    // width: 282px;
+    min-height: 200px;
+    position: relative;
+    span{
+        display: block;
+        font-size: 14px;
+        line-height: 36px;
+        text-align: right;
+        opacity: 0.75;
+        letter-spacing: 5.25px;
+    }
+}
+.travel-slider__items-title{
+    position: absolute;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 8px;
+    opacity: 0.5;
+    transform: rotate(-90deg);
+    width: 0;
+    top: 0;
+    height: 0;
+    left: 0;
+    white-space: nowrap;
+}
+.travel-slider__items-text{
+    position: absolute;
+    padding-left: 40px;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 36px;
+}
 
 
 

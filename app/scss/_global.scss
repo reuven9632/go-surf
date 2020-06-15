@@ -63,7 +63,6 @@ li{
 }
 .description{
     display: inline-block;
-    padding-left: 135px;
     .headline-right{
         display: inline-block;
         font-size: 22px;
@@ -89,9 +88,6 @@ li{
         span{
             font-weight: 100;
             color: rgba(#fff, .5);
-        }
-        img{
-            padding-left: 26px;
         }
     }
 }
