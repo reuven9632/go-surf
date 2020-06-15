@@ -195,7 +195,6 @@
 
 
 .surf{
-    padding: 160px 0 120px;
     background-image: url(../images/surf-bg-marker.png);
     background-position: right 219px;
     background-repeat: no-repeat;
@@ -443,7 +442,20 @@
         }
     }
 }
-
+.travel-slider{
+    &__head{
+        background-position: top left;
+        background-repeat: no-repeat;
+        min-height: 780px;
+    }
+    &__suptitle{
+        text-align: right;
+        padding: 132px 82px 0 0;
+    }
+    &__description{
+        margin-top: -102px;
+    }
+}
 
 
 
